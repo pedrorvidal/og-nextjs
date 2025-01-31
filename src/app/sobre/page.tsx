@@ -6,8 +6,11 @@ export const metadata: Metadata = {
 };
 export default function SobrePage() {
   return (
-    <>
+    <main>
       <h2>Sobre</h2>
-    </>
+      <h2 id="empresa" style={{ margin: '1600px 0' }}>
+        A empresa
+      </h2>
+    </main>
   );
 }
