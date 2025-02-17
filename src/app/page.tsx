@@ -1,10 +1,12 @@
-import Acesso from '@/components/acesso';
+import Acessos from '@/components/acessos';
+import Width from '@/components/width';
 
 export default async function HomePage() {
   return (
     <main>
-      <h1>Vidal Home</h1>
-      <Acesso />
+      <h1>Home</h1>
+      <Width />
+      <Acessos />
     </main>
   );
 }
