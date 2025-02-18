@@ -1,5 +1,5 @@
-import Acessos from '@/components/acessos';
-import Width from '@/components/width';
+import Acessos from '@/components/acessos'; //server component
+import Width from '@/components/width'; // client component
 
 export default async function HomePage() {
   return (
