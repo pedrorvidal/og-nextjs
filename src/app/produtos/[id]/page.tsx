@@ -22,6 +22,7 @@ export default async function ProdutoPage({ params }: PageParams) {
       <h1>{data.nome}</h1>
       <h2>R$ {data.preco}</h2>
       <p>{data.descricao}</p>
+      <p>ID: {data.id}</p>
     </div>
   );
 }
