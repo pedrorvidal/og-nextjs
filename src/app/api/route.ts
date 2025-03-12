@@ -1,21 +1,20 @@
-import { cookies } from "next/headers";
+import { cookies } from 'next/headers';
+import { NextRequest } from 'next/server';
 
 export async function GET() {
-  const response = await fetch('https://api.origamid.online/conta/login',
-    {
-      method: 'POST',
+  const response = await fetch('https://api.origamid.online/conta/login', {
+    method: 'POST',
 
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        username: "dog",
-        password: "dog",
-      }),
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      username: 'dog',
+      password: 'dog',
+    }),
 
-      cache: 'no-cache'
-    }
-  );
+    cache: 'no-cache',
+  });
 
   const data = await response.json();
 
@@ -29,4 +28,11 @@ export async function GET() {
   });
 
   return Response.json(data);
+}
+
+export async function POST(request: NextRequest) {
+  const param = request.nextUrl.searchParams.get('busca');
+  const body = await request.json();
+
+  return Response.json({ method: 'POST', response: param, body });
 }
